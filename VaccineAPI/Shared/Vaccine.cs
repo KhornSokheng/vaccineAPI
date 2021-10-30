@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace VaccineAPI.Shared
 {
-    class Vaccine
+    public class Vaccine
     {
+        public int VaccineID { get; set; }
+        public string VaccineName { get; set; }
+        public Country OriginCountry { get; set; }
+        public string Description { get; set; }
     }
 }

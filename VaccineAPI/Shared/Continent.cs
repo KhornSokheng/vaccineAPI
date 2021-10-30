@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace VaccineAPI.Shared
 {
-    class Continent
+    // Continent.cs
+    public class Continent
     {
+        public int ContinentID { get; set; }
+        public string ContinentName { get; set; }
     }
 }
