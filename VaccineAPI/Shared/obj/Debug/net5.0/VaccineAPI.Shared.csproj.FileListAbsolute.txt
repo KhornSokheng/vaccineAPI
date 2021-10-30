@@ -1,0 +1,11 @@
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\bin\Debug\net5.0\VaccineAPI.Shared.deps.json
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\bin\Debug\net5.0\VaccineAPI.Shared.dll
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\bin\Debug\net5.0\ref\VaccineAPI.Shared.dll
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\bin\Debug\net5.0\VaccineAPI.Shared.pdb
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\VaccineAPI.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\VaccineAPI.Shared.AssemblyInfoInputs.cache
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\VaccineAPI.Shared.AssemblyInfo.cs
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\VaccineAPI.Shared.csproj.CoreCompileInputs.cache
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\VaccineAPI.Shared.dll
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\ref\VaccineAPI.Shared.dll
+D:\year3-1\Web Service\Pair Project\VaccineAPI\Shared\obj\Debug\net5.0\VaccineAPI.Shared.pdb

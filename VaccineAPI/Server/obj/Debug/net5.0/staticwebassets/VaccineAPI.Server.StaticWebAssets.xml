@@ -1,0 +1,5 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\year3-1\Web Service\Pair Project\VaccineAPI\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="D:\year3-1\Web Service\Pair Project\VaccineAPI\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="D:\year3-1\Web Service\Pair Project\VaccineAPI\Client\wwwroot\" />
+</StaticWebAssets>
