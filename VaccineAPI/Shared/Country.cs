@@ -11,6 +11,7 @@ namespace VaccineAPI.Shared
         public int CountryID { get; set; }
         public string CountryName { get; set; }
         public int Population { get; set; }
+        public int ContinentID { get; set; }
         public Continent Continent { get; set; }
     }
 }

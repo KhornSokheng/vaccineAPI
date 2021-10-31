@@ -313,7 +313,7 @@
       "url": "_content\/Syncfusion.Blazor.Grid\/scripts\/sf-grid-e59143.min.js"
     },
     {
-      "hash": "sha256-oLdMd1BR41OkfF1Ofi1fu6qhFkztd\/ldKs7SmdiHEEc=",
+      "hash": "sha256-xrw4nYDiDgwZglp1hg3+IleZ95Qgv2q7v9f76Vnw6lk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1165,19 +1165,19 @@
       "url": "_framework\/dotnet.5.0.9.js"
     },
     {
-      "hash": "sha256-ob+4iuOzXNhJfSxVtkvr+Yb2NbBskxEfV7k732DgsVQ=",
+      "hash": "sha256-sLjSwutkokD9DID1euHO1YuBFoijpFXsy3Y5kGRwklo=",
       "url": "_framework\/VaccineAPI.Shared.dll"
     },
     {
-      "hash": "sha256-mKMtKB4gjHGeP4m0iOTsrQpF4Rp84LOVk9u+3iMKgRQ=",
+      "hash": "sha256-g5NCcn4OyubhABce1dSkilRXxioKMnAWtN2W3ozDyaY=",
       "url": "_framework\/VaccineAPI.Shared.pdb"
     },
     {
-      "hash": "sha256-R1s72ISGAiuhEtT5vHac35DRMEZzMGblbK9Vm1u+uCM=",
+      "hash": "sha256-FEFixaqbUO1SjCwWlOlrc0X73CUJTHHPrVpoSv0qXLw=",
       "url": "_framework\/VaccineAPI.Client.dll"
     },
     {
-      "hash": "sha256-aJNdHdonvhmEwY8KEQmvhFgAW7s2PN2TYEygmCrHYZ8=",
+      "hash": "sha256-q\/n06teTzw+STdNhnC92\/nnCZc3aMK9ja\/cKaBINm\/c=",
       "url": "_framework\/VaccineAPI.Client.pdb"
     },
     {
@@ -2033,7 +2033,7 @@
       "url": "_framework\/dotnet.5.0.9.js.gz"
     },
     {
-      "hash": "sha256-QB0cxd9h\/l7bFyXwbJy8j2gufPJWrxX8rzmqXi4ZOac=",
+      "hash": "sha256-R\/yxsTPyNRUiXbbWYQ4oIfjVE3c49qonCc71M\/Kn\/qU=",
       "url": "_framework\/VaccineAPI.Shared.dll.gz"
     },
     {
@@ -2109,5 +2109,5 @@
       "url": "VaccineAPI.Client.bundle.scp.css"
     }
   ],
-  "version": "3rRHd52\/"
+  "version": "+0PlixlM"
 };

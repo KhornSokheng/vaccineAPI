@@ -9,7 +9,9 @@ namespace VaccineAPI.Shared
     public class Vaccination
     {
         public int VaccinationID { get; set; }
+        public int CountryID { get; set; }
         public Country Country { get; set; }
+        public int VaccineID { get; set; }
         public Vaccine Vaccine { get; set; }
         public int FirstDose { get; set; }
         public int SecondDose { get; set; }

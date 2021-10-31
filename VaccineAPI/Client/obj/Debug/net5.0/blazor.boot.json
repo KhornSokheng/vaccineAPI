@@ -212,13 +212,12 @@
       "mscorlib.dll": "sha256-9AZ7YsJz\/p2gr4E0EQXdHBqwDxoXqtzxhqC6aRsa2K8=",
       "netstandard.dll": "sha256-yOOty6BTX3e57YAEHK5a4nku\/lj0vi7jg\/eQZAjbDQk=",
       "System.Private.CoreLib.dll": "sha256-rraBQp6NevIQiELPVfDFDl5pv9QVJqCiZhB5bkpiZ88=",
-      "VaccineAPI.Shared.dll": "sha256-ob+4iuOzXNhJfSxVtkvr+Yb2NbBskxEfV7k732DgsVQ=",
-      "VaccineAPI.Client.dll": "sha256-R1s72ISGAiuhEtT5vHac35DRMEZzMGblbK9Vm1u+uCM="
+      "VaccineAPI.Shared.dll": "sha256-sLjSwutkokD9DID1euHO1YuBFoijpFXsy3Y5kGRwklo=",
+      "VaccineAPI.Client.dll": "sha256-FEFixaqbUO1SjCwWlOlrc0X73CUJTHHPrVpoSv0qXLw="
     },
     "lazyAssembly": null,
     "pdb": {
-      "VaccineAPI.Shared.pdb": "sha256-mKMtKB4gjHGeP4m0iOTsrQpF4Rp84LOVk9u+3iMKgRQ=",
-      "VaccineAPI.Client.pdb": "sha256-aJNdHdonvhmEwY8KEQmvhFgAW7s2PN2TYEygmCrHYZ8="
+      "VaccineAPI.Client.pdb": "sha256-q\/n06teTzw+STdNhnC92\/nnCZc3aMK9ja\/cKaBINm\/c="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-L2vkcKzmXJtf+J7db5TbDMBckrgqJ5qc0ZzVIdRlm0I=",
