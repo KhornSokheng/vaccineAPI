@@ -10,6 +10,6 @@ namespace VaccineAPI.Server.Models
     {
         Task<IEnumerable<Continent>> GetContinents();
         Task<Continent> GetContinent(int continentID);
-        Task<Continent> UpdateContinent(Continent continent);
+        //Task<Continent> UpdateContinent(Continent continent);
     }
 }

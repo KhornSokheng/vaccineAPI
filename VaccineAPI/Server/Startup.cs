@@ -29,6 +29,8 @@ namespace VaccineAPI.Server
 
             services.AddScoped<IContinentRepository, ContinentRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<IVaccineRepository, VaccineRepository>();
+            services.AddScoped<IVaccinationRepository, VaccinationRepository>();
 
 
             services.AddControllersWithViews();

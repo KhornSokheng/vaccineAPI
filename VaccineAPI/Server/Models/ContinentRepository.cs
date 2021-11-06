@@ -25,9 +25,6 @@ namespace VaccineAPI.Server.Models
             return await appDbContext.Continents.ToListAsync();
         }
 
-        public Task<Continent> UpdateContinent(Continent continent)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
