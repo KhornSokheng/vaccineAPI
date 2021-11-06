@@ -26,6 +26,11 @@ namespace VaccineAPI.Server
         {
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+
+            services.AddScoped<IContinentRepository, ContinentRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
