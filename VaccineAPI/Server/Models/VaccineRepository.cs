@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,29 +14,70 @@ namespace VaccineAPI.Server.Models
         {
             this.appDbContext = appDbContext;
         }
-        public Task<Vaccine> AddVaccine(Vaccine vaccine)
+        public async Task<Vaccine> AddVaccine(Vaccine vaccine)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Vaccines.AddAsync(vaccine);
+            await appDbContext.SaveChangesAsync();
+            return result.Entity;
         }
 
-        public Task<Vaccine> GetVaccine(int vaccineID)
+        public async Task DeleteVaccine(int vaccineID)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Vaccines
+                .FirstOrDefaultAsync(e => e.VaccineID == vaccineID);
+            if (result != null)
+            {
+                appDbContext.Vaccines.Remove(result);
+                await appDbContext.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Vaccine>> GetVaccines()
+        public async Task<Vaccine> GetVaccine(int vaccineID)
         {
-            throw new NotImplementedException();
+            return await appDbContext.Vaccines
+            .FirstOrDefaultAsync(d => d.VaccineID == vaccineID);
         }
 
-        public Task<IEnumerable<Vaccine>> Search(string vaccineName)
+        public async Task<IEnumerable<Vaccine>> GetVaccines()
         {
-            throw new NotImplementedException();
+            return await appDbContext.Vaccines.ToListAsync();
         }
 
-        public Task<Vaccine> UpdateVaccine(Vaccine vaccine)
+        public async Task<IEnumerable<Vaccine>> Search(string vaccineName)
         {
-            throw new NotImplementedException();
+            IQueryable<Vaccine> query = appDbContext.Vaccines;
+            if (!string.IsNullOrEmpty(vaccineName))
+            {
+                query = query.Where(e => e.VaccineName.Contains(vaccineName));
+            }
+            return await query.ToListAsync();
+        }
+
+        public async Task<Vaccine> UpdateVaccine(Vaccine vaccine)
+        {
+            var result = await appDbContext.Vaccines
+                .FirstOrDefaultAsync(e => e.VaccineID == vaccine.VaccineID);
+            if (result != null)
+            {
+                result.VaccineName = vaccine.VaccineName;
+                result.Description = vaccine.Description;
+                
+
+                if (vaccine.OriginCountry != null)
+                {
+                    result.OriginCountry = vaccine.OriginCountry;
+                }else if (vaccine.Country != null)
+                {
+                    
+                    result.OriginCountry = vaccine.Country.CountryName;
+                }
+
+                await appDbContext.SaveChangesAsync();
+                return result;
+            }
+            return null;
+
+            
         }
     }
 }

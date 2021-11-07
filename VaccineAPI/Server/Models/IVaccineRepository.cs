@@ -13,6 +13,6 @@ namespace VaccineAPI.Server.Models
         Task<IEnumerable<Vaccine>> Search(string vaccineName);
         Task<Vaccine> AddVaccine(Vaccine vaccine);
         Task<Vaccine> UpdateVaccine(Vaccine vaccine);
-        
+        Task DeleteVaccine(int vaccineID);
     }
 }
