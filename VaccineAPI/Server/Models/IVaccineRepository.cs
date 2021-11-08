@@ -10,6 +10,7 @@ namespace VaccineAPI.Server.Models
     {
         Task<IEnumerable<Vaccine>> GetVaccines();
         Task<Vaccine> GetVaccine(int vaccineID);
+        Task<Vaccine> GetVaccineByName(string vaccineName);
         Task<IEnumerable<Vaccine>> Search(string vaccineName);
         Task<Vaccine> AddVaccine(Vaccine vaccine);
         Task<Vaccine> UpdateVaccine(Vaccine vaccine);

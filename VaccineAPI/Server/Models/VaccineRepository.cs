@@ -38,6 +38,12 @@ namespace VaccineAPI.Server.Models
             .FirstOrDefaultAsync(d => d.VaccineID == vaccineID);
         }
 
+        public async Task<Vaccine> GetVaccineByName(string vaccineName)
+        {
+            return await appDbContext.Vaccines
+            .FirstOrDefaultAsync(d => d.VaccineName == vaccineName);
+        }
+
         public async Task<IEnumerable<Vaccine>> GetVaccines()
         {
             return await appDbContext.Vaccines.ToListAsync();

@@ -10,6 +10,7 @@ namespace VaccineAPI.Server.Models
     {
         Task<IEnumerable<Country>> GetCountries();
         Task<Country> GetCountry(int countryID);
+        Task<Country> GetCountryByName(string countryName);
         Task<IEnumerable<Country>> Search(string countryName);
         Task<Country> AddCountry(Country country);
         Task<Country> UpdateCountry(Country country);

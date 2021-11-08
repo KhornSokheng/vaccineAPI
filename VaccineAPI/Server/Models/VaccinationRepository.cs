@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,28 +10,78 @@ namespace VaccineAPI.Server.Models
     public class VaccinationRepository : IVaccinationRepository
     {
         private readonly AppDbContext appDbContext;
+        private readonly ICountryRepository countryRepository;
+        private readonly IVaccineRepository vaccineRepository;
         public VaccinationRepository(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
         }
-        public Task<Vaccination> AddVaccination(Vaccination vaccination)
+        public async Task<Vaccination> AddVaccination(Vaccination vaccination)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Vaccinations.AddAsync(vaccination);
+            await appDbContext.SaveChangesAsync();
+            return result.Entity;
         }
 
-        public Task<Vaccination> GetVaccination(int vaccinationID)
+        public async Task DeleteVaccination(int vaccinationID)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Vaccinations
+                .FirstOrDefaultAsync(e => e.VaccinationID == vaccinationID);
+            if (result != null)
+            {
+                appDbContext.Vaccinations.Remove(result);
+                await appDbContext.SaveChangesAsync();
+            }
         }
 
-        public Task<IEnumerable<Vaccination>> GetVaccinations()
+        public async Task<Vaccination> GetVaccination(int vaccinationID)
         {
-            throw new NotImplementedException();
+            return await appDbContext.Vaccinations
+            .FirstOrDefaultAsync(d => d.VaccinationID == vaccinationID);
         }
 
-        public Task<Vaccination> UpdateVaccination(Vaccination vaccination)
+        public async Task<IEnumerable<Vaccination>> GetVaccinations()
         {
-            throw new NotImplementedException();
+            return await appDbContext.Vaccinations.ToListAsync();
+        }
+
+        public async Task<IEnumerable<Vaccination>> Search(int countryID, int vaccineID)
+        {
+            IQueryable<Vaccination> query = appDbContext.Vaccinations;
+
+
+            if (countryID != 0)
+            {
+                
+                query = query.Where(e => e.CountryID == countryID);
+            }
+
+            if (vaccineID != 0)
+            {
+                
+                query = query.Where(e => e.VaccineID == vaccineID);
+            }
+
+            return await query.ToListAsync();
+        }
+
+        public async Task<Vaccination> UpdateVaccination(Vaccination vaccination)
+        {
+            var result = await appDbContext.Vaccinations
+                .FirstOrDefaultAsync(e => e.VaccinationID == vaccination.VaccinationID);
+            if (result != null)
+            {
+                result.CountryID = vaccination.CountryID;
+                result.VaccineID = vaccination.VaccineID;
+                result.FirstDose = vaccination.FirstDose;
+                result.SecondDose = vaccination.SecondDose;
+                result.Percentage = vaccination.Percentage;
+
+
+                await appDbContext.SaveChangesAsync();
+                return result;
+            }
+            return null;
         }
     }
 }

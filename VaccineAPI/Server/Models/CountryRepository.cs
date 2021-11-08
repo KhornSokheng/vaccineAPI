@@ -43,5 +43,11 @@ namespace VaccineAPI.Server.Models
         {
             throw new NotImplementedException();
         }
+
+        public async Task<Country> GetCountryByName(string countryName)
+        {
+            return await appDbContext.Countries
+            .FirstOrDefaultAsync(d => d.CountryName == countryName);
+        }
     }
 }

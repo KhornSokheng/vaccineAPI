@@ -51,6 +51,7 @@ namespace VaccineAPI.Server.Controllers
                     "Error Retrieving Data From The Database");
             }
         }
+        
 
         [HttpGet("{search}")]
         public async Task<ActionResult<IEnumerable<Vaccine>>> Search(string vaccineName)
