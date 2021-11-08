@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineAPI.Server", "Server\VaccineAPI.Server.csproj", "{C8E4F9EA-B3FB-4D32-8620-AECAF1CFE2F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineAPI.Server", "Server\VaccineAPI.Server.csproj", "{C8E4F9EA-B3FB-4D32-8620-AECAF1CFE2F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineAPI.Client", "Client\VaccineAPI.Client.csproj", "{B111F710-364E-403A-BEB2-5C2BF3CAEAA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineAPI.Client", "Client\VaccineAPI.Client.csproj", "{B111F710-364E-403A-BEB2-5C2BF3CAEAA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaccineAPI.Shared", "Shared\VaccineAPI.Shared.csproj", "{80C74413-E9B8-42B7-AFB2-D83681A42BDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaccineAPI.Shared", "Shared\VaccineAPI.Shared.csproj", "{80C74413-E9B8-42B7-AFB2-D83681A42BDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

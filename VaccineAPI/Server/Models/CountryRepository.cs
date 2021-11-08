@@ -24,24 +24,47 @@ namespace VaccineAPI.Server.Models
             return await appDbContext.Countries.ToListAsync();
         }
 
-        public Task<IEnumerable<Country>> Search(string countryName)
+        public async Task<IEnumerable<Country>> Search(string countryName)
         {
-            throw new NotImplementedException();
+            IQueryable<Country> query = appDbContext.Countries;
+            if (!string.IsNullOrEmpty(countryName))
+            {
+                query = query.Where(d => d.CountryName.Contains(countryName));
+            }
+            return await query.ToListAsync();
         }
 
-        public Task<Country> AddCountry(Country country)
+        public async Task<Country> AddCountry(Country country)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Countries.AddAsync(country);
+            await appDbContext.SaveChangesAsync();
+            return result.Entity;
         }
 
-        public Task<Country> UpdateCountry(Country country)
+        public async Task<Country> UpdateCountry(Country country)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Countries
+              .FirstOrDefaultAsync(d => d.CountryID == country.CountryID);
+            if (result != null)
+            {
+                result.CountryName = country.CountryName;
+                result.Population = country.Population;
+                result.ContinentID = country.ContinentID;
+                await appDbContext.SaveChangesAsync();
+                return result;
+            }
+            return null;
         }
 
-        public Task DeleteCountry(int countryID)
+        public async Task DeleteCountry(int countryID)
         {
-            throw new NotImplementedException();
+            var result = await appDbContext.Countries
+             .FirstOrDefaultAsync(d => d.CountryID == countryID);
+            if (result != null)
+            {
+                appDbContext.Countries.Remove(result);
+                await appDbContext.SaveChangesAsync();
+            }
         }
 
         public async Task<Country> GetCountryByName(string countryName)
